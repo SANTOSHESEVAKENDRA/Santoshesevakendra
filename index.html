@@ -132,12 +132,12 @@
             <p class="text-md md:text-lg mt-2">आमच्या येथे ऑनलाईनची सर्व कामे केली जातील</p>
             <!-- Search bar added here -->
             <div class="mt-4 flex justify-center">
-                <input type="text" placeholder="सेवा किंवा कागदपत्र शोधा..." class="p-2 rounded-md w-full max-w-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <input type="text" id="searchInput" placeholder="सेवा किंवा कागदपत्र शोधा..." class="p-2 rounded-md w-full max-w-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
             </div>
         </header>
 
         <!-- Services Section -->
-        <section class="mb-8">
+        <section class="mb-8" id="services-section">
             <h2 class="text-2xl md:text-3xl font-bold section-title mb-6">आमच्या सेवा</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="card col-span-full"> <!-- Changed to col-span-full to make it a single, wide card -->
@@ -185,7 +185,7 @@
         </section>
 
         <!-- Required Documents Section -->
-        <section class="mb-8">
+        <section class="mb-8" id="documents-section">
             <h2 class="text-2xl md:text-3xl font-bold section-title mb-6">विविध दाखल्यांसाठी आवश्यक कागदपत्रे</h2>
             <p class="text-gray-700 mb-6">आपण विविध सरकारी दाखले आणि सेवांसाठी आवश्यक असलेल्या कागदपत्रांची तपशीलवार यादी दिली आहे. ही माहिती अत्यंत उपयुक्त असून नागरिकांना त्यांची कामे पूर्ण करण्यासाठी मार्गदर्शन करेल.</p>
 
@@ -560,6 +560,77 @@
                 arrow.classList.add('rotate');
             }
         }
+
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const serviceListItems = document.querySelectorAll('#services-section .service-list li');
+            const documentAccordionCards = document.querySelectorAll('#document-accordion .card');
+
+            searchInput.addEventListener('input', (event) => {
+                const searchTerm = event.target.value.toLowerCase();
+
+                // Filter Services Section
+                serviceListItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Filter Documents Section
+                documentAccordionCards.forEach(card => {
+                    const header = card.querySelector('.collapsible-header');
+                    const content = card.querySelector('.collapsible-content');
+                    const documentListItems = content.querySelectorAll('.document-list li');
+                    const arrow = header.querySelector('.arrow');
+
+                    let cardMatches = false;
+
+                    // Check if header text matches
+                    if (header.textContent.toLowerCase().includes(searchTerm)) {
+                        cardMatches = true;
+                    }
+
+                    // Check if any document list item within the card matches
+                    documentListItems.forEach(item => {
+                        const text = item.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            item.style.display = '';
+                            cardMatches = true; // If any item matches, show the card
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    // Show/hide the entire card based on matches
+                    if (searchTerm === '' || cardMatches) { // If search bar is empty or card matches
+                        card.style.display = ''; // Show the card
+                        if (cardMatches && !content.classList.contains('open')) {
+                            content.classList.add('open');
+                            arrow.classList.add('rotate');
+                        } else if (!cardMatches && content.classList.contains('open') && searchTerm !== '') {
+                             // If card doesn't match but was open, close it (only if search term is not empty)
+                            content.classList.remove('open');
+                            arrow.classList.remove('rotate');
+                        } else if (searchTerm === '') {
+                            // If search is cleared, ensure all document list items are visible and close accordions
+                            documentListItems.forEach(item => {
+                                item.style.display = '';
+                            });
+                            content.classList.remove('open');
+                            arrow.classList.remove('rotate');
+                        }
+                    } else {
+                        card.style.display = 'none'; // Hide the card
+                        content.classList.remove('open');
+                        arrow.classList.remove('rotate');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
