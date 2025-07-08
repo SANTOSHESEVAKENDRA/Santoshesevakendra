@@ -118,6 +118,29 @@
         .arrow.rotate {
             transform: rotate(90deg);
         }
+        /* Custom styling for service list items to make them more attractive */
+        .service-list-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            background-color: #f9fbe7; /* Light green background */
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease-in-out;
+            margin-bottom: 0.5rem; /* Space between items */
+        }
+        .service-list-item:hover {
+            background-color: #e8f5e9; /* Slightly darker on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-list-item img {
+            width: 24px; /* Set image width */
+            height: 24px; /* Set image height */
+            margin-right: 0.75rem;
+            flex-shrink: 0; /* Prevent image from shrinking */
+            border-radius: 4px; /* Slightly rounded corners for the images */
+        }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -143,42 +166,150 @@
                 <div class="card col-span-full"> <!-- Changed to col-span-full to make it a single, wide card -->
                     <h3 class="text-xl font-semibold mb-3 text-green-700">उपलब्ध सेवा (Available Services)</h3>
                     <ul class="service-list text-gray-700 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4">
-                        <li>पॅनकार्ड (अर्जंट पॅनकार्ड) (PAN Card (Urgent PAN Card))</li>
-                        <li>आधारकार्ड प्रिंट (Aadhaar Card Print)</li>
-                        <li>इलेक्शन कार्ड (Election Card)</li>
-                        <li>आयुष्यमान कार्ड (Ayushman Card)</li>
-                        <li>आभा कार्ड (ABHA Card)</li>
-                        <li>ई-श्रम कार्ड (E-Shram Card)</li>
-                        <li>दिव्यांग कार्ड (Divyang Card)</li>
-                        <li>गॅझेट (Gazette)</li>
-                        <li>ड्रायव्हींग लायसन्स (Driving License)</li>
-                        <li>पासपोर्ट (Passport)</li>
-                        <li>उद्योग आधार (Udyog Aadhaar)</li>
-                        <li>फूड लायसन्स (Food License)</li>
-                        <li>डिजिटल ७/१२ प्रिंट (Digital 7/12 Print)</li>
-                        <li>डिजिटल ८ अ प्रिंट (Digital 8 A Print)</li>
-                        <li>डिजिटल प्रॉपर्टी कार्ड (Digital Property Card)</li>
-                        <li>जीवन प्रमाणपत्र (Life Certificate)</li>
-                        <li>पोलीस व्हेरीफिकेशन (Police Verification)</li>
-                        <li>लाउड स्पीकर परवाना (Loudspeaker Permit)</li>
-                        <li>शॉप ॲक्ट लायसन्स (Shop Act License)</li>
-                        <li>गुमास्ता लायसन्स (Gumasta License)</li>
-                        <li>विवाह नोंदणी (Marriage Registration)</li>
-                        <li>पी. एम. किसान नोंदणी (PM Kisan Registration)</li>
-                        <li>बांधकाम कामगार नोंदणी (Construction Worker Registration)</li>
-                        <li>महा डीबीटी शेतकरी अर्ज (Maha DBT Farmer Application)</li>
-                        <li>पीक विमा (Crop Insurance)</li>
-                        <li>टू व्हीलर / फोर व्हीलर विमा (Two Wheeler / Four Wheeler Insurance)</li>
-                        <li>स्कॉलरशिप अर्ज (Scholarship Application)</li>
-                        <li>नीट / जेईई / सीईटी अर्ज (NEET / JEE / CET Application)</li>
-                        <li>स्पर्धा परिक्षा अर्ज (Competitive Exam Application)</li>
-                        <li>जात पडताळणी (Caste Verification)</li>
-                        <li>भाडे करार पत्र (Rent Agreement Letter)</li>
-                        <li>सर्व प्रकारचे दाखले (All Types of Certificates)</li>
-                        <li>टायपिंग (Typing)</li>
-                        <li>झेरॉक्स (Xerox)</li>
-                        <li>फोटो प्रिंट (Photo Print)</li>
-                        <li>लॅमिनेशन (Lamination)</li>
+                        <li class="service-list-item">
+                            <img src="https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg" alt="PAN Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            पॅनकार्ड (अर्जंट पॅनकार्ड) (PAN Card (Urgent PAN Card))
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2023/08/aadhaar-card-1692265005.jpg" alt="Aadhaar Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            आधारकार्ड प्रिंट (Aadhaar Card Print)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Indian_Voter_ID_Card.png/640px-Indian_Voter_ID_Card.png" alt="Election Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            इलेक्शन कार्ड (Election Card)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://ayushmancarddownload.co.in/wp-content/uploads/2023/07/Ayushman-Card-Download.webp" alt="Ayushman Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            आयुष्यमान कार्ड (Ayushman Card)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://abha.abdm.gov.in/assets/images/ABHA-logo.png" alt="ABHA Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            आभा कार्ड (ABHA Card)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://e-shram.gov.in/assets/img/e-shram-logo.png" alt="E-Shram Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            ई-श्रम कार्ड (E-Shram Card)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://image.shutterstock.com/image-vector/wheelchair-icon-vector-illustration-260nw-1070281679.jpg" alt="Divyang Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            दिव्यांग कार्ड (Divyang Card)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://image.shutterstock.com/image-vector/newspaper-icon-vector-illustration-260nw-1380963380.jpg" alt="Gazette Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            गॅझेट (Gazette)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://image.shutterstock.com/image-vector/indian-maharashtra-car-driver-license-260nw-2184131561.jpg" alt="Driving License Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            ड्रायव्हींग लायसन्स (Driving License)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Indian_Passport_Cover.jpg/800px-Indian_Passport_Cover.jpg" alt="Passport Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            पासपोर्ट (Passport)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://udyamregistration.gov.in/images/udyam_logo.png" alt="Udyog Aadhaar Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            उद्योग आधार (Udyog Aadhaar)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://www.fssai.gov.in/upload/upload-logo/fssai-logo.png" alt="Food License Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            फूड लायसन्स (Food License)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://mahabhulekh.maharashtra.gov.in/images/7-12-extract.png" alt="Digital 7/12 Print Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            डिजिटल ७/१२ प्रिंट (Digital 7/12 Print)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://mahabhulekh.maharashtra.gov.in/images/8a-extract.png" alt="Digital 8 A Print Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            डिजिटल ८ अ प्रिंट (Digital 8 A Print)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://mahabhulekh.maharashtra.gov.in/images/property-card.png" alt="Digital Property Card Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            डिजिटल प्रॉपर्टी कार्ड (Digital Property Card)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://jeevanpramaan.gov.in/public/images/logo.png" alt="Life Certificate Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            जीवन प्रमाणपत्र (Life Certificate)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://www.maharashtra.gov.in/Site/Upload/Images/police-logo.png" alt="Police Verification Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            पोलीस व्हेरीफिकेशन (Police Verification)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Loudspeaker_icon.svg/1200px-Loudspeaker_icon.svg.png" alt="Loudspeaker Permit Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            लाउड स्पीकर परवाना (Loudspeaker Permit)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://www.maharashtra.gov.in/Site/Upload/Images/shop-act.png" alt="Shop Act License Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            शॉप ॲक्ट लायसन्स (Shop Act License)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://www.maharashtra.gov.in/Site/Upload/Images/gumasta-license.png" alt="Gumasta License Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            गुमास्ता लायसन्स (Gumasta License)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Marriage_icon.svg/1200px-Marriage_icon.svg.png" alt="Marriage Registration Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            विवाह नोंदणी (Marriage Registration)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://pmkisan.gov.in/images/PMKISAN_Logo.png" alt="PM Kisan Registration Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            पी. एम. किसान नोंदणी (PM Kisan Registration)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://mahabocw.in/wp-content/uploads/2021/07/logo.png" alt="Construction Worker Registration Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            बांधकाम कामगार नोंदणी (Construction Worker Registration)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://mahadbtmahait.gov.in/images/logo.png" alt="Maha DBT Farmer Application Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            महा डीबीटी शेतकरी अर्ज (Maha DBT Farmer Application)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://pmfby.gov.in/assets/images/logo.png" alt="Crop Insurance Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            पीक विमा (Crop Insurance)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Car_Insurance_Logo.svg/1200px-Car_Insurance_Logo.svg.png" alt="Two Wheeler / Four Wheeler Insurance Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            टू व्हीलर / फोर व्हीलर विमा (Two Wheeler / Four Wheeler Insurance)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Scholarship_icon.svg/1200px-Scholarship_icon.svg.png" alt="Scholarship Application Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            स्कॉलरशिप अर्ज (Scholarship Application)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Exam_icon.svg/1200px-Exam_icon.svg.png" alt="NEET / JEE / CET Application Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            नीट / जेईई / सीईटी अर्ज (NEET / JEE / CET Application)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Exam_icon.svg/1200px-Exam_icon.svg.png" alt="Competitive Exam Application Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            स्पर्धा परिक्षा अर्ज (Competitive Exam Application)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Verification_icon.svg/1200px-Verification_icon.svg.png" alt="Caste Verification Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            जात पडताळणी (Caste Verification)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Agreement_icon.svg/1200px-Agreement_icon.svg.png" alt="Rent Agreement Letter Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            भाडे करार पत्र (Rent Agreement Letter)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Certificate_icon.svg/1200px-Certificate_icon.svg.png" alt="All Types of Certificates Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            सर्व प्रकारचे दाखले (All Types of Certificates)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Typing_icon.svg/1200px-Typing_icon.svg.png" alt="Typing Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            टायपिंग (Typing)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Xerox_logo.svg/1200px-Xerox_logo.svg.png" alt="Xerox Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            झेरॉक्स (Xerox)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Photo_print_icon.svg/1200px-Photo_print_icon.svg.png" alt="Photo Print Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            फोटो प्रिंट (Photo Print)
+                        </li>
+                        <li class="service-list-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Lamination_icon.svg/1200px-Lamination_icon.svg.png" alt="Lamination Icon" onerror="this.src='https://placehold.co/24x24/cccccc/000000?text=Err';" />
+                            लॅमिनेशन (Lamination)
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -574,7 +705,7 @@
                 serviceListItems.forEach(item => {
                     const text = item.textContent.toLowerCase();
                     if (text.includes(searchTerm)) {
-                        item.style.display = '';
+                        item.style.display = 'flex'; // Use flex to keep icon and text aligned
                     } else {
                         item.style.display = 'none';
                     }
