@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>संतोष ई-सेवा केंद्र</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base styles for the body, setting font, background, and text color */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
             background-color: #f0f2f5;
             color: #333;
         }
+        /* Container styling for responsiveness, setting max-width and padding */
         .container {
             max-width: 100%;
             padding: 1rem;
         }
+        /* Media query for larger screens (md breakpoint), adjusting max-width and padding */
         @media (min-width: 768px) {
             .container {
                 max-width: 1200px;
                 padding: 2rem;
             }
         }
+        /* Header section styling with a linear gradient background, text color, padding, border-radius, and shadow */
         .header {
             background: linear-gradient(to right, #4CAF50, #8BC34A);
             color: white;
@@ -30,12 +34,14 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+        /* Section title styling with a specific color, bottom border, padding, and margin */
         .section-title {
             color: #2e7d32;
             border-bottom: 3px solid #8BC34A;
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
         }
+        /* Card styling for service and document sections, with background, border-radius, shadow, padding, margin, and a hover transform effect */
         .card {
             background-color: #ffffff;
             border-radius: 0.75rem;
@@ -44,21 +50,26 @@
             margin-bottom: 1.5rem;
             transition: transform 0.2s ease-in-out;
         }
+        /* Hover effect for cards, translating them slightly upwards */
         .card:hover {
             transform: translateY(-5px);
         }
+        /* Styling for list items within the service list, adding padding and a dashed bottom border */
         .service-list li {
             padding: 0.5rem 0;
             border-bottom: 1px dashed #e0e0e0;
         }
+        /* Removing the bottom border for the last item in the service list */
         .service-list li:last-child {
             border-bottom: none;
         }
+        /* Styling for list items within the document list, setting margin-bottom, list-style, and left margin */
         .document-list li {
             margin-bottom: 0.5rem;
             list-style-type: disc;
             margin-left: 1.25rem;
         }
+        /* Footer section styling with background color, text color, padding, border-radius, and top margin */
         .footer {
             background-color: #333;
             color: white;
@@ -67,6 +78,7 @@
             margin-top: 2rem;
             text-align: center;
         }
+        /* Collapsible header styling, making it a pointer, using flexbox for alignment, padding, background, border-radius, margin, font-weight, color, and a transition for hover effect */
         .collapsible-header {
             cursor: pointer;
             display: flex;
@@ -80,9 +92,11 @@
             color: #2e7d32;
             transition: background-color 0.2s ease-in-out;
         }
+        /* Hover effect for collapsible headers, changing background color */
         .collapsible-header:hover {
             background-color: #dcedc8;
         }
+        /* Collapsible content styling, initially hidden with max-height 0 and overflow hidden, with a transition for smooth opening/closing */
         .collapsible-content {
             max-height: 0;
             overflow: hidden;
@@ -91,13 +105,16 @@
             background-color: #f9fbe7;
             border-radius: 0.5rem;
         }
+        /* Styling for when the collapsible content is open, setting max-height and padding */
         .collapsible-content.open {
             max-height: 1000px; /* Adjust as needed for content */
             padding: 1rem;
         }
+        /* Arrow icon styling with a transition for rotation */
         .arrow {
             transition: transform 0.3s ease-in-out;
         }
+        /* Rotation effect for the arrow when the collapsible content is open */
         .arrow.rotate {
             transform: rotate(90deg);
         }
@@ -107,6 +124,8 @@
     <div class="container mx-auto">
         <!-- Header Section -->
         <header class="header mb-8">
+            <!-- Logo added here -->
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocJrNx5OnB-z4zGPOSXVWqfGZtGIRW1RNy_HcfhFkjRvT42cnSY=s288-c-no" alt="Santosh E-Seva Kendra Logo" class="mx-auto mb-4 rounded-full shadow-lg" style="max-width: 150px;">
             <h1 class="text-3xl md:text-4xl font-bold mb-2">संतोष ई-सेवा केंद्र</h1>
             <p class="text-lg md:text-xl font-semibold">प्रोप्रा. संतोष चौगुले</p>
             <p class="text-md md:text-lg">संपर्क - 7758870373</p>
@@ -117,9 +136,9 @@
         <section class="mb-8">
             <h2 class="text-2xl md:text-3xl font-bold section-title mb-6">आमच्या सेवा</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card">
-                    <h3 class="text-xl font-semibold mb-3 text-green-700">मुख्य सेवा</h3>
-                    <ul class="service-list text-gray-700">
+                <div class="card col-span-full"> <!-- Changed to col-span-full to make it a single, wide card -->
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">उपलब्ध सेवा</h3>
+                    <ul class="service-list text-gray-700 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4">
                         <li>पॅनकार्ड (अर्जंट पॅनकार्ड)</li>
                         <li>आधारकार्ड प्रिंट</li>
                         <li>इलेक्शन कार्ड</li>
@@ -132,11 +151,6 @@
                         <li>पासपोर्ट</li>
                         <li>उद्योग आधार</li>
                         <li>फूड लायसन्स</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 class="text-xl font-semibold mb-3 text-green-700">डिजिटल आणि प्रमाणपत्र सेवा</h3>
-                    <ul class="service-list text-gray-700">
                         <li>डिजिटल ७/१२ प्रिंट</li>
                         <li>डिजिटल ८ अ प्रिंट</li>
                         <li>डिजिटल प्रॉपर्टी कार्ड</li>
@@ -148,11 +162,6 @@
                         <li>विवाह नोंदणी</li>
                         <li>पी. एम. किसान नोंदणी</li>
                         <li>बांधकाम कामगार नोंदणी</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 class="text-xl font-semibold mb-3 text-green-700">इतर महत्त्वपूर्ण सेवा</h3>
-                    <ul class="service-list text-gray-700">
                         <li>महा डीबीटी शेतकरी अर्ज</li>
                         <li>पीक विमा</li>
                         <li>टू व्हीलर / फोर व्हीलर विमा</li>
@@ -320,7 +329,7 @@
                         <span class="arrow">&#9654;</span>
                     </div>
                     <div id="caste-cert" class="collapsible-content">
-                        <p class="text-sm text-gray-600 mb-2">(ओ.बी.सी/एस.बी.सी/एस.ई.बी.सी - १३/१०/१९६७; व्ही.जे.एन.टि - २१/११/१९६१; एस.सी/एस.टी - १०/०८/१९५०)</p>
+                        <p class="text-sm text-gray-600 mb-2">(ओ.बी.सी/एस.बी.सी/एस.ई.बी.सी - १३/१०/१९६७; व्ही.जे.एन.टि - २१/११/१९६१; एस.C/एस.टी - १०/०८/१९५०)</p>
                         <p class="text-sm text-gray-600 mb-2">(पूर्वीचा जात नमूद असलेला पुरावा आवश्यक. उदा. शाळा सोडल्याचा दाखला किंवा गाव नमुना-१४ उतारा)</p>
                         <ul class="document-list text-gray-700">
                             <li>दाखलाधारकाचा शाळेचा दाखला किंवा बोनाफाईड</li>
@@ -439,7 +448,7 @@
                             <li>६ क उतारा</li>
                             <li>रेशनकार्ड</li>
                             <li>घरपत्रक उतारा (ग्रामसेवक सहिचा)</li>
-                            <li>पो. पाटील रहिवासी दाखला</li>
+                            <li>पोलीस पाटील रहिवासी दाखला</li>
                             <li>स्वघोषणापत्र</li>
                             <li>आधारकार्ड</li>
                             <li>अर्जदाराचा फोटो</li>
