@@ -1,92 +1,504 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>शासकीय दाखले - आवश्यक कागदपत्रे</title>
-  <style>
-    body {
-      font-family: 'Noto Sans Devanagari', sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #3f51b5;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    h2 {
-      color: #333;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 10px;
-      }
-      .card {
-        padding: 15px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-  <header>
-    <h1>विविध शासकीय दाखल्यांसाठी आवश्यक कागदपत्रे</h1>
-  </header>
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="#" class="text-2xl font-bold text-indigo-600 rounded-md p-2 hover:bg-indigo-50 transition duration-300">MySite</a>
+            <!-- Navigation Links -->
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">Home</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">About</a></li>
+                    <li><a href="#services" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">Services</a></li>
+                    <li><a href="#documents" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">दाखले व कागदपत्रे</a></li> <!-- New Navigation Link -->
+                    <li><a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="container">
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 md:py-32 overflow-hidden rounded-b-lg shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Welcome to Our Amazing Website
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-up">
+                We provide innovative solutions to help your business thrive. Discover how we can make a difference.
+            </p>
+            <a href="#services" class="bg-white text-indigo-700 hover:bg-indigo-100 px-8 py-4 rounded-full font-semibold text-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                Explore Our Services
+            </a>
+        </div>
+        <!-- Abstract shapes for background visual appeal -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="0.1" d="M0,160L48,160C96,160,192,160,288,170.7C384,181,480,203,576,208C672,213,768,203,864,192C960,181,1056,171,1152,160C1248,149,1344,139,1392,133.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+    </section>
 
-    <div class="card">
-      <h2>१. उत्पन्न दाखला (Income Certificate)</h2>
-      <ul>
-        <li>अर्ज</li>
-        <li>रेशनकार्ड</li>
-        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा)</li>
-        <li>आधारकार्ड</li>
-        <li>बँक पासबुक</li>
-        <li>पो. पाटील दाखला</li>
-        <li>८ अ चा उतारा (शेती उत्पन्न असल्यास)</li>
-        <li>फॉर्म नं.१६ / पगार दाखला (सरकारी नोकरीसाठी)</li>
-        <li>अर्जदाराचा फोटो</li>
-      </ul>
-    </div>
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/818CF8/FFFFFF?text=Team+Image" alt="Our Team" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        Welcome to MySite, where innovation meets excellence. We are a dedicated team passionate about delivering high-quality solutions that empower businesses and individuals. Our journey began with a simple vision: to create impactful digital experiences.
+                    </p>
+                    <p class="mb-4">
+                        With years of expertise in various domains, we pride ourselves on our commitment to client satisfaction and continuous improvement. We believe in fostering strong relationships and working collaboratively to achieve outstanding results.
+                    </p>
+                    <p>
+                        Our mission is to transform ideas into reality, providing robust and scalable solutions tailored to your unique needs. Join us on this exciting journey!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h2>२. वय अधिवास दाखला (Age Domicile Certificate)</h2>
-      <ul>
-        <li>जन्म दाखला</li>
-        <li>प्रवेश नोंदवही उतारा (१ ली ते १० वी)</li>
-        <li>रेशनकार्ड</li>
-        <li>घरपत्रक उतारा</li>
-        <li>आधारकार्ड (दाखलाधारक व अर्जदार)</li>
-        <li>पो. पाटील दाखला</li>
-        <li>स्वघोषणापत्र</li>
-        <li>अर्जदाराचा फोटो</li>
-        <li>शाळा सोडल्याचा दाखला / बोनाफाईड</li>
-        <li>अर्ज</li>
-      </ul>
-    </div>
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+                        <!-- Icon Placeholder: Replace with actual SVG icon if desired -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Web Development</h3>
+                    <p class="text-gray-600 text-center">
+                        Building responsive, modern, and high-performance websites tailored to your business needs.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+                        <!-- Icon Placeholder -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Mobile Apps</h3>
+                    <p class="text-gray-600 text-center">
+                        Developing intuitive and powerful mobile applications for iOS and Android platforms.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+                        <!-- Icon Placeholder -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Digital Marketing</h3>
+                    <p class="text-gray-600 text-center">
+                        Boosting your online presence with effective SEO, social media, and content strategies.
+                    </p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+                        <!-- Icon Placeholder -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Cloud Solutions</h3>
+                    <p class="text-gray-600 text-center">
+                        Implementing scalable and secure cloud infrastructure for your business operations.
+                    </p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+                        <!-- Icon Placeholder -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Data Analytics</h3>
+                    <p class="text-gray-600 text-center">
+                        Transforming raw data into actionable insights to drive informed business decisions.
+                    </p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+                        <!-- Icon Placeholder -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-8 7-8 7s-8-2-8-7V5l8-3 8 3z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Cybersecurity</h3>
+                    <p class="text-gray-600 text-center">
+                        Protecting your digital assets with robust security measures and proactive threat detection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- इथे इतर दाखल्यांचे कार्ड्स टाकता येतील -->
-    
-  </div>
+    <!-- New Section: Documents and Certificates -->
+    <section id="documents" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">विविध दाखल्यांसाठी आवश्यक कागदपत्रे (Required Documents for Various Certificates)</h2>
+            <p class="text-lg text-gray-700 mb-8 text-center">
+                येथे विविध सरकारी दाखले आणि सेवांसाठी आवश्यक असलेल्या कागदपत्रांची तपशीलवार यादी दिली आहे. ही माहिती नागरिकांना त्यांची कामे पूर्ण करण्यासाठी मार्गदर्शन करेल.
+            </p>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 1. उत्पन्न दाखला (Income Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">१. उत्पन्न दाखला (Income Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>अर्ज (Application)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (Aadhaar Card)</li>
+                        <li>बँक पासबुक (Bank Passbook)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>८ अ चा उतारा (शेतीपासून उत्पन्न असल्यास) (8 A Extract - if income from agriculture)</li>
+                        <li>फॉर्म नं. १६ किंवा पगार दाखला (सरकारी नोकरी असल्यास) (Form No. 16 or Salary Certificate - if government job)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                    </ul>
+                </div>
+
+                <!-- 2. वय अधिवास दाखला (Age Domicile Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">२. वय अधिवास दाखला (Age Domicile Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>जन्म दाखला (Birth Certificate)</li>
+                        <li>प्रवेश नोंदवही उतारा (१ ली ते १० वी) (Admission Register Extract - 1st to 10th Std)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card - Certificate Holder & Applicant)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>अर्ज (Application)</li>
+                        <li>शाळा सोडल्याचा दाखला किंवा बोनाफाईड (School Leaving Certificate or Bonafide)</li>
+                    </ul>
+                </div>
+
+                <!-- 3. वय राष्ट्रीयत्व दाखला (Age Nationality Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">३. वय राष्ट्रीयत्व दाखला (Age Nationality Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>जन्म दाखला (Birth Certificate)</li>
+                        <li>प्रवेश नोंदवही उतारा (१ ली ते १० वी) (Admission Register Extract - 1st to 10th Std)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card - Certificate Holder & Applicant)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>वय अधिवास दाखला (Age Domicile Certificate)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>शाळा सोडल्याचा दाखला किंवा बोनाफाईड (School Leaving Certificate or Bonafide)</li>
+                    </ul>
+                </div>
+
+                <!-- 4. डोंगरी दाखला (Hill Area Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">४. डोंगरी दाखला (Hill Area Certificate)</h3>
+                    <p class="text-sm text-gray-600 mb-2">(प्राथमिक व माध्यमिक शिक्षण कणकवली तालुक्यातील असणे आवश्यक)</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>जन्म दाखला (Birth Certificate)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>प्रवेश नोंदवही उतारा (१ ली ते १० वी) (Admission Register Extract - 1st to 10th Std)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card - Certificate Holder & Applicant)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>वय अधिवास दाखला (Age Domicile Certificate)</li>
+                        <li>प्रतिज्ञापत्र (Affidavit)</li>
+                        <li>लाभार्थीचा फोटो (Beneficiary's Photo)</li>
+                        <li>अर्ज (Application)</li>
+                        <li>शाळा सोडल्याचा दाखला किंवा बोनाफाईड (School Leaving Certificate or Bonafide)</li>
+                    </ul>
+                </div>
+
+                <!-- 5. रहिवास दाखला (Residence Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">५. रहिवास दाखला (Residence Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>जन्म दाखला (Birth Certificate)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>प्रवेश नोंदवही उतारा (१ ली ते १० वी) (Admission Register Extract - 1st to 10th Std)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card - Certificate Holder & Applicant)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>प्रतिज्ञापत्र (Affidavit)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>अर्ज (Application)</li>
+                        <li>शाळा सोडल्याचा दाखला किंवा बोनाफाईड (School Leaving Certificate or Bonafide)</li>
+                    </ul>
+                </div>
+
+                <!-- 6. नॉन क्रिमिलेयर दाखला (Non-Creamy Layer Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">६. नॉन क्रिमिलेयर दाखला (Non-Creamy Layer Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>दाखलाधारकाचा जातीचा दाखला (Certificate Holder's Caste Certificate)</li>
+                        <li>शाळा सोडल्याचा दाखला किंवा बोनाफाईड (School Leaving Certificate or Bonafide)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card - Certificate Holder & Applicant)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>तीन वर्षाचा उत्पन्न दाखला (Three Years Income Certificate)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>अर्ज (Application)</li>
+                    </ul>
+                </div>
+
+                <!-- 7. जात दाखला (Caste Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">७. जात दाखला (Caste Certificate)</h3>
+                    <p class="text-sm text-gray-600 mb-2">(ओ.बी.सी/एस.बी.सी/एस.ई.बी.सी-१३/१०/१९६७; व्ही.जे.एन.टि-२१/११/१९६१; एस.सी/एस.टी-१०/०८/१९५०)</p>
+                    <p class="text-sm text-gray-600 mb-2">(पूर्वीचा जात नमूद असलेला पुरावा आवश्यक. उदा. शाळा सोडल्याचा दाखला किंवा गाव नमुना-१४ उतारा)</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>दाखलाधारकाचा शाळेचा दाखला किंवा बोनाफाईड (Certificate Holder's School Certificate or Bonafide)</li>
+                        <li>दाखलाधारकाच्या वडिलांचा शाळा सोडल्याचा दाखला किंवा गाव नमुना-१४ उतारा (Certificate Holder's Father's School Leaving Certificate or Gaon Namuna-14 Extract)</li>
+                        <li>दाखलाधारकाच्या आजोबांचा शाळा सोडल्याचा दाखला किंवा गाव नमुना-१४ उतारा (Certificate Holder's Grandfather's School Leaving Certificate or Gaon Namuna-14 Extract)</li>
+                        <li>जर पुरावाधारक अन्य (चुलतकाका/आत्या/आजोबा/पणजोबा) असेल तर त्यांचा पुरावा जोडणे (If proof holder is other (uncle/aunt/grandfather/great-grandfather), attach their proof)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>अर्ज (Application)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card - Certificate Holder & Applicant)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>पो. पाटील वंशावळ (Police Patil Genealogy)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>महसूली पुरावा (जुने ७/१२, ८ अ, फेरफार) (Revenue Proof - Old 7/12, 8 A, Ferfar)</li>
+                    </ul>
+                </div>
+
+                <!-- 8. भूमिहीन दाखला (Landless Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">८. भूमिहीन दाखला (Landless Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>अर्ज (Application)</li>
+                        <li>भूमिहीन असल्याबाबतचे प्रतिज्ञापत्र (Affidavit regarding being landless)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (Aadhaar Card)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणा (Self-declaration)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>तलाठी अहवाल (Talathi Report)</li>
+                    </ul>
+                </div>
+
+                <!-- 9. ३०% महिला आरक्षण दाखला (30% Women Reservation Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">९. ३०% महिला आरक्षण दाखला (30% Women Reservation Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>दाखलाधारकाचा शाळा सोडलेला दाखला किंवा बोनाफाईड (Certificate Holder's School Leaving Certificate or Bonafide)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card - Certificate Holder & Applicant)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>तीन वर्षाचा उत्पन्न दाखला (Three Years Income Certificate)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>अर्ज (Application)</li>
+                    </ul>
+                </div>
+
+                <!-- 10. ज्येष्ठ नागरिक दाखला (Senior Citizen Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">१०. ज्येष्ठ नागरिक दाखला (Senior Citizen Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>अर्ज (Application)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>वयाचा पुरावा (शाळेचा दाखला / जन्म नोंद उतारा / उपजिल्हा रुग्णालय कणकवली यांचा वयाचा पुरावा) (Proof of Age - School Certificate / Birth Registration Extract / Age Proof from Sub-District Hospital Kankavli)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>पोलीस पाटील रहिवासी दाखला (Police Patil Residence Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>आधारकार्ड (Aadhaar Card)</li>
+                    </ul>
+                </div>
+
+                <!-- 11. वारस दाखला (गिरणीकामगार) (Heir Certificate - Mill Worker) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">११. वारस दाखला (गिरणीकामगार) (Heir Certificate - Mill Worker)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>गिरणी कामगार असल्याबाबतचे पुरावे (Proofs of being a Mill Worker)</li>
+                        <li>म्हाडाचे पत्र (खोली मिळत असल्याबाबतचे) (MHADA Letter - regarding receiving a room)</li>
+                        <li>७/१२ व ८ अ व फेरफार (7/12 & 8 A & Ferfar)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>वंशावळ बाबतचे प्रतिज्ञापत्र (Affidavit regarding Genealogy)</li>
+                        <li>६ क उतारा (6 C Extract)</li>
+                        <li>पो. पाटील रहिवासी दाखला (Police Patil Residence Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>आधारकार्ड (Aadhaar Card)</li>
+                        <li>तलाठी अहवाल (Talathi Report)</li>
+                    </ul>
+                </div>
+
+                <!-- 12. शेतकरी दाखला (Farmer Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">१२. शेतकरी दाखला (Farmer Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>७/१२ (पीक पाहणीत पीक नमूद असलेला) (7/12 - with crop mentioned in crop inspection)</li>
+                        <li>७/१२ वर नमूद सर्व फेरफार (All Ferfar mentioned on 7/12)</li>
+                        <li>८ अ उतारा (8 A Extract)</li>
+                        <li>६ क उतारा (6 C Extract)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>पो. पाटील रहिवासी दाखला (Police Patil Residence Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>आधारकार्ड (Aadhaar Card)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>प्रतिज्ञापत्र (अर्जदार व त्या व्यतिरिक्त अन्य व्यक्तीस हवा असल्यास दोघांचेही) (Affidavit - of applicant and other person if required by them)</li>
+                        <li>मंडळ अधिकारी अहवाल (Mandal Adhikari Report)</li>
+                    </ul>
+                </div>
+
+                <!-- 13. अल्प भूधारक दाखला (Small Landholder Certificate) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">१३. अल्प भूधारक दाखला (Small Landholder Certificate)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>अर्ज (Application)</li>
+                        <li>रेशनकार्ड (Ration Card)</li>
+                        <li>अल्प भूधारक असल्याबाबतचे प्रतिज्ञापत्र (Affidavit regarding being a small landholder)</li>
+                        <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract - Gramsevak Signed)</li>
+                        <li>आधारकार्ड (Aadhaar Card)</li>
+                        <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                        <li>स्वघोषणापत्र (Self-declaration Affidavit)</li>
+                        <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
+                        <li>७/१२ व ८ अ (7/12 & 8 A)</li>
+                        <li>मंडळ अधिकारी अहवाल (Mandal Adhikari Report)</li>
+                    </ul>
+                </div>
+
+                <!-- 14. रेशनकार्ड सेवा (Ration Card Services) -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100 md:col-span-2">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">१४. रेशनकार्ड सेवा (Ration Card Services)</h3>
+
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">अ. रेशनकार्डवर नाव दाखल करणे (Adding Name to Ration Card)</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li>अर्ज (Application)</li>
+                        <li>वय वर्ष १ ते ६ असेल तर: (If age is 1 to 6 years:)
+                            <ul class="list-circle list-inside ml-6">
+                                <li>आधारकार्ड (Aadhaar Card)</li>
+                                <li>जन्म दाखला (Birth Certificate)</li>
+                            </ul>
+                        </li>
+                        <li>वय वर्ष ७ ते १२ असेल तर: (If age is 7 to 12 years:)
+                            <ul class="list-circle list-inside ml-6">
+                                <li>आधारकार्ड (Aadhaar Card)</li>
+                                <li>बोनाफाईड (Bonafide)</li>
+                            </ul>
+                        </li>
+                        <li>विवाहित स्त्री असल्यास: (If married woman:)
+                            <ul class="list-circle list-inside ml-6">
+                                <li>राजपत्र किंवा विवाह नोंदणी दाखला (Gazette or Marriage Registration Certificate)</li>
+                                <li>नाव कमी केलेला दाखला (माहेरकडील रेशनकार्डमधून) (Name Removal Certificate - from parent's Ration Card)</li>
+                                <li>पो. पाटील दाखला (दोन्ही नावाची व्यक्ती एक असल्याबाबतचा) (Police Patil Certificate - regarding both names belonging to one person)</li>
+                            </ul>
+                        </li>
+                        <li>रेशनकार्डवरील नाव असलेल्या सर्व व्यक्तींची आधारकार्ड (Aadhaar Cards of all persons whose names are on the Ration Card)</li>
+                        <li>रेशनकार्डवरील नाव असलेल्या सर्व व्यक्तींची पॅनकार्ड किंवा मतदान ओळखपत्र (PAN Cards or Voter IDs of all persons whose names are on the Ration Card)</li>
+                    </ul>
+
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">ब. रेशनकार्डवरील नाव कमी करणे (मयत असल्यास) (Removing Name from Ration Card - if deceased)</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>अर्ज (Application)</li>
+                        <li>मयत असल्यास मयत दाखला (Death Certificate if deceased)</li>
+                        <li>विवाहित व अन्य कारणाने नाव कमी असल्यास तसे कारण अर्जात लिहिणे (If name is being removed due to marriage or other reasons, state the reason in the application)</li>
+                        <li>रेशनकार्डवरील नाव असलेल्या सर्व व्यक्तींची आधारकार्ड (Aadhaar Cards of all persons whose names are on the Ration Card)</li>
+                        <li>रेशनकार्डवरील नाव असलेल्या सर्व व्यक्तींची पॅनकार्ड किंवा मतदान ओळखपत्र (PAN Cards or Voter IDs of all persons whose names are on the Ration Card)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg" placeholder="your.email@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg" placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-lg shadow-inner">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2025 MySite. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for smooth scrolling (optional, pure CSS scroll-behavior also works) -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
