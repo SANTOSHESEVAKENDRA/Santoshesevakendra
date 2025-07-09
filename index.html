@@ -161,7 +161,6 @@
             transform: translateY(-3px) scale(1.01); /* More pronounced hover effect */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
         }
-        /* Removed .service-list-item img styling as images are removed */
         /* Search input styling */
         #searchInput {
             border: 1px solid #ccc;
@@ -227,6 +226,9 @@
                             <li class="service-list-item text-lg font-bold">
                                 लॅमिनेशन (Lamination)
                             </li>
+                            <li class="service-list-item text-lg font-bold">
+                                फोटोवरून फोटो (Photo from Photo)
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -269,6 +271,9 @@
                             <li class="service-list-item">
                                 पोलीस व्हेरीफिकेशन (Police Verification)
                             </li>
+                            <li class="service-list-item">
+                                डिजिटल सिग्नेचर (DSC) (Digital Signature (DSC))
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -285,7 +290,13 @@
                                 उद्योग आधार (Udyog Aadhaar)
                             </li>
                             <li class="service-list-item">
+                                उधम स्वयंभू (Udyam Swayam)
+                            </li>
+                            <li class="service-list-item">
                                 फूड लायसन्स (Food License)
+                            </li>
+                            <li class="service-list-item">
+                                फूड अँड ड्रग्ज लायसन्स (Food and Drugs License)
                             </li>
                             <li class="service-list-item">
                                 लाउड स्पीकर परवाना (Loudspeaker Permit)
@@ -319,6 +330,21 @@
                             </li>
                             <li class="service-list-item">
                                 भाडेकरार पत्र (Rent Agreement)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tehsil Related Works -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('tehsil-works')">
+                        तहसिल संबंधित कामे (Tehsil Related Works)
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="tehsil-works" class="collapsible-content">
+                        <ul class="service-list text-gray-700 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4">
+                            <li class="service-list-item">
+                                तहसिल संबंधित कामे (Tehsil Related Works)
                             </li>
                         </ul>
                     </div>
@@ -362,6 +388,12 @@
                             <li class="service-list-item">
                                 विवाह नोंदणी (Marriage Registration)
                             </li>
+                            <li class="service-list-item">
+                                शासकीय योजना (Government Schemes)
+                            </li>
+                            <li class="service-list-item">
+                                अटल पेन्शन योजना (Atal Pension Yojana)
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -390,6 +422,24 @@
                     </div>
                 </div>
 
+                <!-- Financial Services -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('financial-services')">
+                        आर्थिक सेवा (Financial Services)
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="financial-services" class="collapsible-content">
+                        <ul class="service-list text-gray-700 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4">
+                            <li class="service-list-item">
+                                DigiPay
+                            </li>
+                            <li class="service-list-item">
+                                भारत बिलपे (Bharat BillPay)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- Other Important Services -->
                 <div class="card">
                     <div class="collapsible-header" onclick="toggleAccordion('other-important')">
@@ -407,13 +457,304 @@
                             <li class="service-list-item">
                                 टू-व्हीलर/फोर-व्हीलर विमा (Two-Wheeler/Four-Wheeler Insurance)
                             </li>
+                            <li class="service-list-item">
+                                IRCTC
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Required Documents Section -->
+        <!-- Required Documents for Services Section -->
+        <section class="mb-8" id="service-documents-section">
+            <h2 class="section-title mb-6">सेवांसाठी आवश्यक कागदपत्रे</h2>
+            <p class="text-gray-700 mb-6 text-center">येथे आमच्या विविध सेवांसाठी आवश्यक कागदपत्रांची तपशीलवार माहिती दिली आहे.</p>
+
+            <div id="service-documents-accordion">
+                <!-- Pan Card (Urgent Pan Card) Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('pan-card-req-docs')">
+                        पॅनकार्ड (अर्जंट पॅनकार्ड) साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="pan-card-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>फोटो (२) (Photo (2))</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Aadhaar Card Print Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('aadhaar-print-req-docs')">
+                        आधारकार्ड प्रिंट साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="aadhaar-print-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्डला मोबाईल नंबर लिंग असणे आवश्‍यक (Mobile number must be linked to Aadhaar Card)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Election Card Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('election-card-req-docs')">
+                        इलेक्शन कार्ड साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="election-card-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>फोटो (Photo)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ayushman Card Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('ayushman-card-req-docs')">
+                        आयुष्यमान कार्ड साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="ayushman-card-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>रेशनकार्ड (Ration Card)</li>
+                            <li>फोटो (Photo)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ABHA Card Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('abha-card-req-docs')">
+                        आभा कार्ड साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="abha-card-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- E-Shram Card Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('e-shram-card-req-docs')">
+                        ई - श्रम कार्ड साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="e-shram-card-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Gazette Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('gazette-req-docs')">
+                        गॅझेट साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="gazette-req-docs" class="collapsible-content">
+                        <h4 class="text-lg font-semibold mb-2 text-green-700">विवाह असल्‍यास (If married)</h4>
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड पती व पत्‍नी (Aadhaar Card of Husband & Wife)</li>
+                            <li>विवाह नोंदणी दाखला (दाखला नसल्‍यास प्रतिज्ञापत्र) (Marriage Registration Certificate (Affidavit if no certificate))</li>
+                            <li>शाळा सोडल्‍याचा दाखला (School Leaving Certificate)</li>
+                            <li>फोटो (Photo)</li>
+                        </ul>
+                        <h4 class="text-lg font-semibold mt-4 mb-2 text-green-700">इतर कारण असल्‍यास (If other reason)</h4>
+                        <ul class="document-list text-gray-700">
+                            <li>वेगवेगळी नावे असणारे दोन पुरावे किंवा प्रतिज्ञापत्र (Two proofs with different names or Affidavit)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Driving License Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('driving-license-req-docs')">
+                        ड्रायव्हींग लायसन्स साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="driving-license-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>शाळा सोडल्‍याचा दाखला (School Leaving Certificate)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Passport Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('passport-req-docs')">
+                        पासपोर्ट साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="passport-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>पॅनकार्ड (PAN Card)</li>
+                            <li>शाळा सोडल्‍याचा दाखला (School Leaving Certificate)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Udyog Aadhaar Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('udyog-aadhaar-req-docs')">
+                        उद्योग आधार साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="udyog-aadhaar-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>पॅनकार्ड (PAN Card)</li>
+                            <li>बॅंक पासबुक (Bank Passbook)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Food License Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('food-license-req-docs')">
+                        फूड लायसन्स साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="food-license-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>पॅनकार्ड (PAN Card)</li>
+                            <li>फोटो (Photo)</li>
+                            <li>डॉक्‍टर सर्टिफिकेट (Doctor Certificate)</li>
+                            <li>असिसमेंट (भाड्याने असल्‍यास अग्रीमेंट) (Assessment (Agreement if rented))</li>
+                            <li>ग्रामपंचायत नाहरकत दाखला (Gram Panchayat No Objection Certificate)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Police Verification Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('police-verification-req-docs')">
+                        पोलीस व्हेरीफिकेशन साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="police-verification-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>रेशनकार्ड (Ration Card)</li>
+                            <li>शाळा सोडल्‍याचा दाखला (School Leaving Certificate)</li>
+                            <li>फोटो (Photo)</li>
+                            <li>सही (Signature)</li>
+                            <li>अर्ज किंवा कंपनी लेटर (Application or Company Letter)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Shop Act License Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('shop-act-license-req-docs')">
+                        शॉप ॲक्ट लायसन्स साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="shop-act-license-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>पॅनकार्ड (PAN Card)</li>
+                            <li>फोटो (Photo)</li>
+                            <li>सही (Signature)</li>
+                            <li>दुकानाचा फोटो (Shop Photo)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- P.M. Kisan Registration Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('pm-kisan-registration-req-docs')">
+                        पी. एम. किसान नोंदणी साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="pm-kisan-registration-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड पती व पत्‍नी (Aadhaar Card of Husband & Wife)</li>
+                            <li>७/१२ (7/12)</li>
+                            <li>८ अ (8 A)</li>
+                            <li>फेरफार (Mutation)</li>
+                            <li>रेशनकार्ड (Ration Card)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Construction Worker Registration Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('construction-worker-registration-req-docs')">
+                        बांधकाम कामगार नोंदणी साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="construction-worker-registration-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>९० दिवसाचे ग्रामसेवक सहिचे प्रमाणपत्र (90 days Gramsevak signed certificate)</li>
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>कुटुंबातील व्‍यक्‍तींचे आधारकार्ड (Aadhaar Cards of family members)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Maha DBT Farmer Application Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('maha-dbt-farmer-app-req-docs')">
+                        महा डीबीटी शेतकरी अर्ज साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="maha-dbt-farmer-app-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>फार्मर आयडी (Farmer ID)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Crop Insurance Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('crop-insurance-req-docs')">
+                        पीक विमा साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="crop-insurance-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>७/१२ (7/12)</li>
+                            <li>बॅंक पासबुक (Bank Passbook)</li>
+                            <li>पिकपेरा बाबत स्‍वघोषणापत्र (Self-declaration regarding crop sowing)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Digital Signature (DSC) Documents -->
+                <div class="card">
+                    <div class="collapsible-header" onclick="toggleAccordion('digital-signature-req-docs')">
+                        डिजिटल सिग्नेचर (DSC) साठी आवश्यक कागदपत्रे
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div id="digital-signature-req-docs" class="collapsible-content">
+                        <ul class="document-list text-gray-700">
+                            <li>पॅनकार्ड (PAN Card)</li>
+                            <li>आधारकार्ड (Aadhaar Card)</li>
+                            <li>फोटो (Photo)</li>
+                            <li>सही (Signature)</li>
+                            <li>मोबाईल नंबर (Mobile Number)</li>
+                            <li>ई-मेल आयडी (Email ID)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Required Documents Section (Original Certificate Requirements) -->
         <section class="mb-8" id="documents-section">
             <h2 class="section-title mb-6">विविध दाखल्यांसाठी आवश्यक कागदपत्रे</h2>
             <p class="text-gray-700 mb-6 text-center">आपण विविध सरकारी दाखले आणि सेवांसाठी आवश्यक असलेल्या कागदपत्रांची तपशीलवार यादी दिली आहे. ही माहिती अत्यंत उपयुक्त असून नागरिकांना त्यांची कामे पूर्ण करण्यासाठी मार्गदर्शन करेल.</p>
@@ -476,7 +817,7 @@
                             <li>रेशनकार्ड (Ration Card)</li>
                             <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract (Gramsevak Signed))</li>
                             <li>आधारकार्ड (दाखलाधारक व अर्जदार) (Aadhaar Card (Certificate Holder & Applicant))</li>
-                            <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                            <li>पो. पाटील दाखला (Police पाटील Certificate)</li>
                             <li>स्वघोषणापत्र (Self-Declaration)</li>
                             <li>वय अधिवास दाखला (Age Domicile Certificate)</li>
                             <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
@@ -595,7 +936,7 @@
                             <li>रेशनकार्ड (Ration Card)</li>
                             <li>घरपत्रक उतारा (ग्रामसेवक सहिचा) (House Register Extract (Gramsevak Signed))</li>
                             <li>आधारकार्ड (Aadhaar Card)</li>
-                            <li>पो. पाटील दाखला (Police Patil Certificate)</li>
+                            <li>पो. पाटील दाखला (Police पाटील Certificate)</li>
                             <li>स्वघोषणा (Self-Declaration)</li>
                             <li>अर्जदाराचा फोटो (Applicant's Photo)</li>
                             <li>तलाठी अहवाल (Talathi Report)</li>
@@ -796,7 +1137,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.getElementById('searchInput');
             const serviceListItems = document.querySelectorAll('#services-section .service-list-item');
-            const documentAccordionCards = document.querySelectorAll('#document-accordion .card');
+            const documentAccordionCards = document.querySelectorAll('#documents-section .card'); // For original certificate docs
+            const serviceDocumentAccordionCards = document.querySelectorAll('#service-documents-section .card'); // For new service docs
+
             const allCollapsibleContents = document.querySelectorAll('.collapsible-content');
             const allCollapsibleArrows = document.querySelectorAll('.collapsible-header .arrow');
 
@@ -827,7 +1170,7 @@
                     }
                 });
 
-                // Filter Documents Section
+                // Filter Original Documents Section (Certificates)
                 documentAccordionCards.forEach(card => {
                     const header = card.querySelector('.collapsible-header');
                     const content = card.querySelector('.collapsible-content');
@@ -866,12 +1209,55 @@
                     }
                 });
 
+                // Filter New Service Documents Section
+                serviceDocumentAccordionCards.forEach(card => {
+                    const header = card.querySelector('.collapsible-header');
+                    const content = card.querySelector('.collapsible-content');
+                    const documentListItems = content.querySelectorAll('.document-list li');
+                    const arrow = header.querySelector('.arrow');
+
+                    let cardMatches = false;
+
+                    // Check if header text matches
+                    if (header.textContent.toLowerCase().includes(searchTerm)) {
+                        cardMatches = true;
+                    }
+
+                    // Check if any document list item within the card matches
+                    documentListItems.forEach(item => {
+                        const text = item.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            item.style.display = '';
+                            cardMatches = true; // If any item matches, show the card
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    // Show/hide the entire card based on matches
+                    if (searchTerm === '' || cardMatches) { // If search bar is empty or card matches
+                        card.style.display = ''; // Show the card
+                        if (cardMatches && !content.classList.contains('open')) {
+                            content.classList.add('open');
+                            arrow.classList.add('rotate');
+                        }
+                    } else {
+                        card.style.display = 'none'; // Hide the card
+                        content.classList.remove('open');
+                        arrow.classList.remove('rotate');
+                    }
+                });
+
+
                 // If search term is empty, ensure all service list items are visible and close all accordions except General Services
                 if (searchTerm === '') {
                     serviceListItems.forEach(item => {
                         item.style.display = 'flex';
                     });
                     documentAccordionCards.forEach(card => {
+                        card.style.display = '';
+                    });
+                    serviceDocumentAccordionCards.forEach(card => {
                         card.style.display = '';
                     });
                     // Re-open General Services by default
